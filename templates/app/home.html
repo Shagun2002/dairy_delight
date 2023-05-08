@@ -1,0 +1,204 @@
+{% extends 'app/base.html' %} {% load static %}
+
+<body>
+  {% block banner-slider %}
+
+  <div
+    id="carouselExampleControlsNoTouching"
+    class="carousel slide"
+    data-bs-touch="false"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item imgg-size">
+        <img
+          src="{% static 'images\banner\yogurt.jpg' %}"
+          class="d-block w-100"
+          alt="banner image1"
+        />
+      </div>
+      <div class="carousel-item active imgg-size">
+        <img
+          src="{% static 'images/banner/pexels-navbar.jpg' %}"
+          class="d-block w-100"
+          alt="banner image2" style="margin-top:-10rem; top:-8re;"
+        />
+      </div>
+      <div class="carousel-item  imgg-size">
+        <img
+          src="{% static 'images/banner/strawberry.jpg' %}"
+          class="d-block w-100"
+          alt="banner image3"
+        />
+      </div>
+      <div class="carousel-item imgg-size">
+        <img
+          src="{% static 'images/banner/milkfruits.jpg' %}"
+          class="d-block w-100"
+          alt="banner image4"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControlsNoTouching"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControlsNoTouching"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  {% endblock banner-slider %} 
+  {% block information %}
+
+  <div class="container"> 
+    <div class=" text-center p-5 text-data border-bottom shadow products-div">
+      <h1 style="color:#00425A;" class="text-center">Products</h1>
+      <p style="color:#0F6292; font-size:29px;"  >
+        Dodla offers a wide range of milk products in both liquid milk and
+        by-product categories. The liquid milk comprises of 5 types of products
+        variants and the by-product comprises of 14 different types of products.
+        Dodla offers a wide range of milk products comprising of Fresh milk,
+        Butter, Ghee, Paneer, Curd, Flavoured milk, Doodh Peda, Ice Cream and
+        Skimmed Milk Powder. 
+      </p>
+    </div>
+  </div>
+   {% endblock information %}
+
+{% comment %} 
+    <!--  {% comment %}{% block main-content %}
+
+  <div class="container home-image row-container">
+  <br>    <br /><br />
+    <section class="examples-section">
+
+    <div class="row-container images-flex">
+        <div class="goodnesssec buttermilk gheebg">
+          <a href="{% url 'category' 'LS' %}">
+            <div class="goodnesssec text-center img-size box">
+              <img
+                src=" {% static 'images/products/lassi2.jpg' %}"
+                class="img-responsive1"
+                alt=""
+              />
+              <p class="mlkpro">LASSI</p>
+            </div>
+          </a>
+        </div>
+      
+     
+        <div class="row goodnesssec buttermilk curdbg">
+          <a href="{% url 'category' 'CR' %}">
+            <div class="goodnesssec text-center img-size box">
+              <img
+                src=" {% static 'images/products/curd1.jpg' %}"
+                class="img-responsive1"
+                alt=""
+              />
+              <p class="mlkpro">CURD</p>
+            </div>
+          </a>
+        </div>
+      
+
+     
+        <div class="goodnesssec buttermilk thirdbg">
+          <a href="{% url 'category' 'IC' %}">
+            <div class="goodnesssec text-center img-size box">
+              <img
+                src=" {% static 'images/products/kulfii.jpg' %}"
+                class="img-responsive1"
+                alt=""
+              />
+              <p class="mlkpro">KULFI</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    <div class="row-container">
+        <div class="goodnesssec buttermilk gheebg">
+          <a href="{% url 'category' 'MS' %}">
+            <div class="goodnesssec text-center img-size box">
+              <img
+                src=" {% static 'images/products/milkshake.jpg' %}"
+                class="img-responsive1"
+                alt=""
+              />
+              <p class="mlkpro">MILKSHAKE</p>
+            </div>
+          </a>
+        </div>
+      
+
+      
+        <div class="goodnesssec buttermilk curdbg">
+          <a href="{% url 'category' 'ML' %}">
+            <div class="goodnesssec text-center img-size box">
+              <img
+                src=" {% static 'images/products/milk.jpg' %}"
+                class="img-responsive1"
+                alt=""
+              />
+              <p class="mlkpro">MILK</p>
+            </div>
+          </a>
+        </div>
+      
+
+     
+        <div class="goodnesssec buttermilk thirdbg">
+          <a href="{% url 'category' 'IC' %}">
+            <div class="goodnesssec text-center img-size box">
+              <img
+                src=" {% static 'images/products/ice-cream.jpg' %}"
+                class="img-responsive1"
+                alt=""
+              />
+              <p class="mlkpro">ICEBAR</p>
+            </div> 
+          </a>
+        </div>
+      </div>
+  
+</section>
+</div>
+
+</div>
+  {% endblock main-content %} 
+   {% endcomment %}
+
+
+  {% block main-content %}
+  <div style="margin-left: -121px;
+  margin-top: 80px;">
+  <div class=" dairy-home" style="margin-left:19%;" >
+    <div class="row">
+      <div class="col-sm-10">
+        <div class="row">
+          {% for i in product %}
+          <div class="col text-center mb-4">
+            <a href="{% url 'product-detail' i.id %}" class="btn">
+              <div>
+                <img src="{{i.product_image.url}}" width="300px" height="200px" />
+                <div class="item-text">{{i.title}}</div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock main-content %}
+</body>

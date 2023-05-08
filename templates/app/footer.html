@@ -1,0 +1,76 @@
+
+{% load static %}
+  
+  <div class="footer">
+    <div class="inner-footer">
+    <!-- <div class="container flex footer-container"> -->
+      <div class="col">
+      <a href="/" class="">
+        <img class="logo-img1" src="{% static 'images/banner/Moo licious-1.png' %}"  alt="company logo" />
+      </a>
+      <br><br>
+      <address style="color:white;">
+        <a class="font-bold text-white"> <b>Moo-licious Pvt. Ltd.</b></a><br>
+        
+        <a>CIN: L15209TG1995PLC020324</a><br>
+        <a>8-2-293/82/A, 270/Q, Road No 10-C,</a><br>
+        <a>
+            Jubilee Hills, Pune, Maharashtra – 500 033.<br>
+        Maharashtra, India 201001 </a><br>
+        <a>Tel: +91 40 4546 7777</a><br>
+    </address>
+  </div>
+      
+      <div class=" col">
+      <div class="link-column flex nav-item2">
+        <h4 style="color:white;">Products</h4>
+        <a href="{% url 'category' 'ML' %}" class="hover-link">Milk </a>
+        <a href="{% url 'category' 'CR' %}" class="hover-link"> Curd</a>
+        <a href="{% url 'category' 'LS' %}" class="hover-link"> Lassi</a>
+        <a href="{% url 'category' 'MS' %}" class="hover-link"> MilkShake</a>
+        <a href="{% url 'category' 'PN' %}" class="hover-link">Paneer</a>
+        <a href="{% url 'category' 'CS' %}" class="hover-link"> Cheese</a>
+      </div>
+    </div>
+
+     <div class=" col">
+      <div class="link-column flex nav-item2">
+        <h4 style="color:white;">Quick Links</h4>
+        <a href="/" class="hover-link">Home </a>
+        <a href="{% url 'about' %}" class="hover-link"> About Us </a>
+        <a href="{% url 'contact' %}" class="hover-link">Contact Us</a>
+        <a href="{% url 'show_cart' %}" class="hover-link"> Cart</a>
+        <a href="{% url 'wishlist' %}" class="hover-link">Wishlist</a>
+      </div>
+    </div>
+  
+  
+
+    <div class=" col">
+      <div class="link-column flex nav-item2 text-white">
+      <h4 style="color:white;">Resources</h4>
+    <a>
+      <i class="fas fa-home mr-3"></i> Ghaziabad, Uttar Pradesh </a>
+    <a>
+      <i class="fa-solid fa-envelope"></i> shagunwork1@gmail.com</a>
+    <a>
+      <i class="fas fa-phone mr-3"></i> + 91 93194 52xxx</a>
+    <a>
+      <i class="fas fa-print mr-3"></i> + 91 93194 55xxx</a>
+  </div>
+</div>
+    </div>
+  <!-- <div class="footer-bottom text-white">
+      <center> Disclaimer | Privacy Policy |
+      Copyright @2023 | Moo Licious Pvt. Ltd. | All rights reserved.
+      </center>
+    </div>   -->
+  </div>
+
+ 
+
+
+
+
+
+  

@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+   <center> 
+      <form method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+    
+    {% for fm in form %}
+    {{fm.label_tag}}  {{fm}} 
+    <small class="text-danger"> {{fm.errors|striptags}}</small> <br>
+    {% endfor %}
+    
+    <div id="contact-form-container" class="contact-container">
+      <h1 class="bold"><b>Send me a message</b></h1>
+      <p class="m-font-size">Feel free to get in touch with me with anything related to Dairy Delight or you can just say hi 👋 I will get back to you as soon as I can.</p>
+      <div class="input-wrapper">
+          <input id="contact-name-input" class="border-input" name="name" placeholder="Name" type="text">
+          <p id="contact-name-input-error" class="input-error-msg">Please enter your name</p>
+      </div>
+      <div class="input-wrapper">
+          <input id="contact-email-input" class="border-input" name="email" placeholder="Email" type="email">
+          <p id="contact-email-input-error" class="input-error-msg">Please enter a valid email address</p>
+      </div>
+      
+      <div class="input-wrapper">
+          <textarea id="contact-message-input" class="border-input" name="message" placeholder="Message" type="text" rows="5"></textarea>
+          <p id="contact-message-input-error" class="input-error-msg">Please write a message</p>
+      </div>
+      <div id="contact-send-btn" >
+        <input type="submit" class="send-btn" value="Send">  </div>
+  </div>
+  </form>
+</center>
+
+    </div>
+    </div>
+</div>
+<br><br><br>
+{% endblock main-content %}
+
+
+
+

@@ -1,0 +1,592 @@
+.goodnessseccont img {
+  width: 100%;
+}
+
+.my-main-content{
+  min-height: 35rem;
+  overflow-x: hidden;
+}
+.goodnesssec a {
+  text-decoration: none;
+}
+
+.images-flex img {
+  display: flex;
+}
+
+.nav-item2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.row-container {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-style {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: medium;
+  color: blue;
+}
+
+.my-bg {
+  background-color: #153c63;
+}
+
+.contact-footer {
+  display: flex;
+}
+.social-links {
+  padding: 10px;
+}
+
+.img-size img {
+  display: flex;
+  justify-content: space-between;
+  height: 250px;
+  width: 350px;
+  object-fit: contain;
+}
+.img-size {
+  margin: 20px;
+  padding: 30px;
+}
+/* trying media queries for <=1024px */
+@media screen and (max-width:1024px){
+.gallery{
+  width:100%;
+  padding-inline: 13px;
+  grid-auto-rows: 220px;
+}
+.box{
+  grid-row: span 1;
+  grid-column: span 3;
+}
+}
+
+
+@media screen and (max-width:500px){
+  body{
+    width: 100%;
+  }
+  .footer{
+   display: flex;
+   flex-direction: column;
+  }
+}
+
+.comments-section{
+  display: flex;
+  flex-direction:column;
+}
+
+.img-responsive1{
+  width: 80%; 
+}
+.box{
+  width: 80%;
+}
+
+.gallery{
+  width: 81%;
+}
+
+/* top banner */
+.top-banner {
+  background-color: #6096c0;
+}
+
+.imgg-size img {
+  height: 750px;
+  width: 100%;
+}
+
+.products-div {
+  margin-top: -18rem;
+  position: relative;
+}
+.logo-img {
+  width: 250px;
+  height: 66px;
+}
+.company-logo img {
+  width: 200px;
+  height: 90px;
+}
+.nav-links {
+  flex-basis: 730px;
+}
+.nav-links ul {
+  justify-content: end;
+  gap: 40px;
+}
+.home-image img {
+  margin-left: -55px;
+}
+.category-img img {
+  margin-left: 40px;
+}
+
+.my-share-btn {
+  float: left;
+}
+/* important */
+.container {
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.hover-link {
+  color: whitesmoke;
+  transition: 0.2s ease-out;
+}
+.hover-link:hover {
+  color: wheat;
+}
+
+/* footer  */
+.flex {
+  display: flex;
+  align-items: center;
+}
+.footer-container {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer {
+  /* padding-block: 50px; */
+  background-color: #6096c0;
+  position: sticky;
+  display: block;
+  width: 100%;
+}
+ 
+.inner-footer {
+  width: 95%;
+  margin: auto;
+  padding: 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.footer-items {
+  width: 25%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.footer-items a{
+  text-align: justify;
+  line-height:28px;
+}
+
+.dairy-home {
+  display: inline-flex;
+}
+.item-text {
+  width: 250px;
+  margin: 0px;
+  padding: 20px;
+  display: flex;
+}
+.item-image {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  border: white 0px solid;
+}
+
+.goodnesssec {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.goodnesssec a {
+  text-decoration: none;
+  color: black;
+}
+
+.row-container {
+  display: flex;
+}
+
+
+footer {
+  padding-bottom: 4rem;
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.link-column {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* footer responsive */
+
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width:320px) and (max-width:635px){
+  .category-img img{
+    margin-left: -3rem;
+  }
+  #cmnt{
+    width: 18.5rem;
+  }
+  .img-product-class img {
+    height: 2rem;
+    width: 4rem;
+    margin-left: -2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .inner-footer {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .logo-img1{
+    width: 12rem;
+    height: 4.5rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h4 {
+    font-size: 17px;
+  }
+  .footer .col a {
+    font-size: 14px;
+  }
+  .logo-img1{
+    width: 9rem;
+    height: 4.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h4 {
+      font-size: 14px;
+    }
+    .footer .col a {
+      font-size: 13px;
+    }
+    .logo-img1{
+      width: 8rem;
+      height: 4.5rem;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 90%;
+  }
+  .logo-img1{
+    width: 13rem;
+    height: 5rem;
+  }
+}
+
+/* subfooter section */
+.subfooter {
+  background-color: #088395;
+  padding: 20px;
+}
+.subfooter-container {
+  justify-content: center;
+  gap: 30px;
+  height: 60px;
+}
+
+/* google link */
+.login-with-google-btn {
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  padding: 12px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+}
+/* prod-detail images */
+.img-product-class img {
+  height: 396px;
+  width: 486px;
+  margin-left: -100px;
+}
+
+/* contact */
+.contact-container {
+  max-width: 80%;
+  margin: 130px auto 50px;
+  text-align: center;
+}
+
+.contact-container .input-wrapper {
+  max-width: 380px;
+  margin: 0 auto 15px;
+}
+.m-font-size {
+  font-size: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  display: block;
+  border: 1px solid black;
+}
+
+.input-error-msg {
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.send-btn {
+  background-color: rgba(0, 38, 255, 0.607);
+  max-width: 380px;
+  margin: 15px auto 0;
+  padding: 15px 15px;
+  font-size: 20px;
+}
+.contact-container {
+  max-width: 80%;
+  margin: 130px auto 50px;
+  text-align: center;
+}
+
+#floating-share-buttons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+/* #floating-share-buttons li {} */
+
+#floating-share-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+#floating-share-buttons a.share-facebook {
+  background-color: #395793;
+}
+#floating-share-buttons a.share-pinterest {
+  background-color: #b8171c;
+}
+#floating-share-buttons a.share-twitter {
+  background-color: #1c9deb;
+}
+#floating-share-buttons a.share-linkedin {
+  background-color: #21577e;
+}
+#floating-share-buttons a.share-whatsapp {
+  background-color: #48a91f;
+}
+#floating-share-buttons a.share-mail {
+  background-color: #333;
+}
+/*
+  Breakpoint is 1024px. You change this value to adapt it to your design
+*/
+
+/* Desktop */
+@media (min-width: 1023px) {
+  ul#floating-share-buttons {
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 100px;
+    padding: 0px;
+  }
+  ul#floating-share-buttons a {
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    transition: width 0.5s;
+  }
+  ul#floating-share-buttons a:hover {
+    width: 4.5rem;
+  }
+  #floating-share-buttons a.share-whatsapp {
+    display: none;
+  }
+}
+/* Mobile */
+@media (max-width: 1024px) {
+
+  .footer {
+    display:flex;
+    flex-direction: column;
+  }
+  #floating-share-buttons {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #floating-share-buttons li {
+    display: inline-block;
+    width: calc(100% / 6);
+    padding: 0;
+    margin: 0;
+  }
+  #floating-share-buttons li a {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 3rem;
+    width: 100%;
+  }
+}
+
+.google-btn a {
+  margin-left: 200px;
+}
+
+/* comment */
+
+.comment-meta {
+  /* display: flex; */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comments-section{
+   background-color: #F0F0F0;
+   padding: 10px;
+   border-radius: 10px;
+   margin-top: 40px;
+   width: 32rem;
+}
+/* .display-cmt{
+  background-color: #F0F0F0;
+} */
+
+.clear {
+  clear: both;
+}
+.wrapper {
+  width: 400px;
+  margin: 10px auto;
+}
+
+fieldset {
+  padding: 10px;
+  border-radius: 10px;
+  background: #F0F0F0;
+  width: 126%;
+  height: 156px;
+  margin-left: -330px;
+  margin-top: 40px;
+}
+.form_grp {
+  margin-bottom: 10px;
+}
+.cmt-label {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 21px;
+  color: #fff;
+  padding-left: 34px;
+  /* background: url(https://cdn3.iconfinder.com/data/icons/glypho-free/64/pen-checkbox-32.png)
+    no-repeat left center; */
+}
+.cmt-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  resize: none;
+}
+.cmt-button {
+  padding: 5px 20px;
+  background-color: #0e7ec7;
+  color: #fff;
+  float: right;
+  border-radius: 13px;
+}
+.viewCmnt {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  background: #c8e7fb;
+  border-bottom: 1px solid #a6dafc;
+}
+.viewCmnt p {
+  width: 100%;
+  float: left;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.edit,
+.delete {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: none;
+  cursor: pointer;
+  bottom: 5px;
+  padding: 2px;
+}
+.viewCmnt:hover .edit,
+.viewCmnt:hover .delete {
+  display: block;
+}
+.edit {
+  right: 26px;
+  background: url(https://cdn4.iconfinder.com/data/icons/miu/22/editor_pencil_pen_edit_write_-16.png)
+    no-repeat center #0e7ec7;
+}
+.delete {
+  right: 5px;
+  background: url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/cross-24-16.png)
+    no-repeat center #0e7ec7;
+  z-index: 2;
+}

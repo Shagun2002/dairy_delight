@@ -1,0 +1,147 @@
+{% extends 'app/base.html' %} {% load static %} {% load social_share %} 
+{% block title %}Product-Detail{% endblock title %}
+ {% block main-content %}
+<div class="my-share-icons">
+  <!-- Share Buttons -->
+  <ul id="floating-share-buttons">
+    <li>
+      <a
+        href="https://www.facebook.com/sharer.php?u={{request.build_absolute_uri}}"
+        class="share-facebook"
+      >
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        href="http://pinterest.com/pin/create/button/?url={{request.build_absolute_uri}}"
+        class="share-pinterest"
+        ><i class="fa-brands fa-pinterest" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        href="https://twitter.com/share?url={{request.build_absolute_uri}}"
+        class="share-twitter"
+        ><i class="fa-brands fa-twitter" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        href="http://linkedin.com/share/?url={{request.build_absolute_uri}}"
+        class="share-linkedin"
+        ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
+      ></a>
+    </li>
+    <li>
+      <a
+        href="mailto:?subject=Check%20out%20this%20link;body={{ request.build_absolute_uri }}"
+        class="share-mail"
+        ><i class="fa-solid fa-envelope" aria-hidden="true"></i
+      ></a>
+    </li>
+  </ul>
+  <!-- /Share Buttons -->
+</div>
+
+<div class="container">
+  <div class="row flex justify-content-between" style="margin-top: 40px">
+    <div class="img2 col-lg-5 mt-5 img-product-class">
+      <img
+        src="{{product.product_image.url}}"
+        
+        class="image img-responsive col-xs-6 col-sm-12 col-lg-12 mt-3 text-sm-center"
+        alt=""
+      />
+    </div>
+    <div class="productdetail col-lg-5">
+      <h2 style="font-family: Georgia; font-size: 50px; width: 100%">
+        {{product.title}}
+      </h2>
+      <h5>{{product.title}} Rs.{{product.discounted_price}}/-</h5>
+      <small class="text-decoration-line-through text-muted fs-5">
+        <del>Rs.{{product.selling_price}}/-</del>
+      </small>
+      <br /><br />
+      <!-- <h4>{{product.title}} Features:</h4> -->
+      <ul class="fs-5" style="font-family: Rajdhani">
+        <li style="font-size: 23px">{{product.description}}</li>
+      </ul>
+
+      <form action="/add-to-cart" class="d-inline">
+        <input type="hidden" name="product_id" value="{{product.id}}" />
+
+        <button type="submit" class="btn btn-primary shadow px-5 py-3">
+          Add to Cart
+        </button>
+        <button type="submit" class="btn btn-warning shadow px-5 py-3 ms-4">
+          Buy Now
+        </button>
+      </form>
+
+      {% if wishlist %}
+      <a
+        pid="{{product.id}}"
+        class="minus-wishlist btn btn-danger shadow px-4 py-3 ms-3"
+      >
+        <i class="fas fa-heart fa-lg"></i
+      ></a>
+      {% else %}
+      <a
+        pid="{{product.id}}"
+        class="plus-wishlist btn btn-success shadow px-4 py-3 ms-3"
+      >
+        <i class="fas fa-heart fa-lg"></i
+      ></a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- comment-html -->
+<div class="row">
+  <div class="col">
+    <div class="wrapper">
+      <div class="commentBoxfloat comments-section">
+        <form id="cmnt" method="POST">
+          {% csrf_token %}
+          
+            <div class="form_grp ">
+              <label class="cmt-label text-dark"><b>Add comment</b></label>
+              
+              <input type="text" name="comment" id="userCmnt" placeholder="Write comments here...">
+            </div>
+            <div class=" form_grp">
+              <button class="cmt-button" type="submit" id="submit">
+                <i class="fa-solid fa-paper-plane"></i> &nbsp; Comment
+              </button>
+            </div>
+          <!-- </fieldset> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col display-cmt">
+    <div class="cmntContr ">
+      <div class="row-wise">
+        <div class=" form_grp comments-section">
+          <h4>{{ comment.name }}</h4>
+            {% for comment in comments %}              
+            <div class="comment">
+              <div class="comment-meta">
+                <h4>{{comment.name}}</h4>
+                <span>{{ comment.created_at|date:"M d, Y" }}</span>            
+              </div>
+              <p>{{comment.comment}}</p>
+              <hr>
+            </div>
+             {% endfor %}            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock main-content %}
