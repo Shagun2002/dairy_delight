@@ -22,10 +22,10 @@ A new E-commerce web application to meet your Daily Dairy products requirements.
 
 ## Software Required
 
-- Django (LTS version)
+- Django framework
 - Python (version - 3.10.7)
 - VS Code
-- Postgres
+- Postgres database
 
 ## Installation Steps
 
